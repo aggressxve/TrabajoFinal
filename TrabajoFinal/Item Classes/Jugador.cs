@@ -10,6 +10,7 @@ namespace TrabajoFinal.Item_Classes
     {
         public bool tieneLlaveMesita;
         public bool tieneLlaveSalida;
+        public bool haTomadoLlave;
         public bool tieneFoto;
         public Foto foto;
 
@@ -17,6 +18,7 @@ namespace TrabajoFinal.Item_Classes
         {
             tieneLlaveMesita = false;
             tieneLlaveSalida = false;
+            haTomadoLlave = false;
             tieneFoto = false;
         }
 
@@ -28,6 +30,11 @@ namespace TrabajoFinal.Item_Classes
         public void MostrarInformacionFoto()
         {
             foto.Examinar();
+        }
+
+        public void JugadorTomoLlave()
+        {
+            haTomadoLlave = true;
         }
     }
 }

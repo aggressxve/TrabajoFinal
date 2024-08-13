@@ -15,30 +15,53 @@ namespace TrabajoFinal
             while (eleccionValida == false)
             {
                 Console.WriteLine("¿Qué quieres hacer?: ");
+                eleccionJugador = LeerNumero();
+                eleccionValida = true;
+            }
+            Console.Clear();
+            return eleccionJugador;
+        }
+
+        public static int LeerNumero()
+        {
+            int numero = 0;
+            bool eleccionValida = false;
+            while (eleccionValida == false)
+            {
                 try
                 {
-                    eleccionJugador = Int32.Parse(Console.ReadLine());
+                    numero = Int32.Parse(Console.ReadLine());
                     eleccionValida = true;
                 }
                 catch (IOException)
                 {
-                    Console.WriteLine("Por favor introduce una opción válida.");
+                    MensajeError();
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("Por favor introduce una opción válida.");
+                    MensajeError();
                 }
                 catch (OutOfMemoryException)
                 {
-                    Console.WriteLine("Por favor introduce una opción válida.");
+                    MensajeError();
                 }
                 catch (ArgumentException)
                 {
-                    Console.WriteLine("Por favor introduce una opción válida.");
+                    MensajeError();
+                }
+                catch (OverflowException)
+                {
+                    MensajeError();
                 }
             }
             Console.Clear();
-            return eleccionJugador;
+            return numero;
+        }
+
+        public static void MensajeError()
+        {
+            Console.WriteLine("Por favor introduce una opción válida.");
+            Console.ReadKey();
         }
     }
 }

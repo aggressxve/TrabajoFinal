@@ -25,7 +25,7 @@ namespace TrabajoFinal
             int[] generadorCombinacion = new int[3];
             generadorCombinacion[0] = rnd.Next(-30, 30);
 
-            for (int i = 1; i < combinacion.Length; i++)
+            for (int i = 1; i < generadorCombinacion.Length; i++)
             {
                 if (generadorCombinacion[i - 1] < 0)
                 {

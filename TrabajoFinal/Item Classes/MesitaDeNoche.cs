@@ -30,12 +30,12 @@ namespace TrabajoFinal.Item_Classes
         {
             if (jugador.tieneLlaveMesita)
             {
-                Console.WriteLine("Usaste la llave de la cama.\nHas abierto el cajón de la mesita!\n");
+                Console.WriteLine("Usaste la llave de la cama.\nHas abierto el cajón de la mesita!");
                 estaAbierto = true;
             }
             else
             {
-                Console.WriteLine("Parece que está cerrado con llave...\n");
+                Console.WriteLine("Parece que está cerrado con llave...");
             }
             return estaAbierto;
         }
